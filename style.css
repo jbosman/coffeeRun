@@ -1,0 +1,16 @@
+body {
+	padding: 25px;
+}
+
+label {
+	font-weight: bold;
+}
+
+.radio > label {
+	margin-left: 5px;
+}
+
+
+
+
+

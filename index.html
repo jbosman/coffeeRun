@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'</meta>
+	<title>coffeeRun</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel='stylesheet' href='style.css' />
+</head>
+<body>
+	<header class='container'>
+		<h1>CoffeeRun</h1>
+	</header>
+	<section>
+		<div class='container' >
+			<div class='panel-body'>
+				<form data-coffee-order='form' >
+					<div class='form-group'>
+						<label for='coffeeOrder'>Coffee Order</label>
+						<input class='form-control' name='coffee' id='coffeeOrder' autofocus/>
+					</div>
+					<div class='form-group'>
+						<label for='emailInput'>Email</label>
+						<input class='form-control' type='email' name='emailAddress' id='emailInput' value='' placeholder="optimus@prime.com" />
+					</div>
+					<div class='radio'>
+						<div>
+						<label>Size</label>
+						</div>
+						<label>
+							<input type='radio' name=size value='short' />
+							Short
+						</label>
+						<label>
+							<input type='radio' name=size value='tall' checked/>
+							Tall
+						</label>
+						<label>
+							<input type='radio' name=size value='grande' />
+							Grande
+						</label>
+					</div>
+					<div class='form-group' >
+						<label for='flavorShot'>Flavor Shot</label>
+						<select id='flavorShot' class='form-control' name='flavor' >
+							<option value=''>None</option>
+							<option value='caramel'>Caramel</option>
+							<option value='almond'>Almond</option>
+							<option value='mocha'>Mocna</option>
+						</select>
+					</div>
+					<div class='form-group' >
+						<label for='strengthLevel'>Caffeine Rating</label>
+						<div>
+							<input id='strengthLevel' name='strength' type='range' value='30' />
+						</div>
+					</div>
+					<button type='submit' class='btn btn-primary'>Submit</button>
+					<button type='reset' class='btn btn-danger'>Reset</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+	<script src='scripts/datastore.js' charset='utf-8'></script>
+	<script src='scripts/truck.js' charset='utf-8'></script>
+	<script src='scripts/formHandler.js' charset='utf8'></script>
+	<script src='scripts/main.js' charset='utf-8'></script>
+
+</body>
+</html>
