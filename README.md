@@ -8,7 +8,7 @@ The project is a front end coffee ordering page. You create an object ([datastor
 
 ## Takeaways
 
-For me the most important think I took from this is the importance of keeping your modules separate and succinct and how much it can help you when testing.
+For me the most important thing I took from this is the importance of keeping your modules separate and succinct. Seeing this showed me how much this can aid in testing.
 
 
 ## Screen Shots

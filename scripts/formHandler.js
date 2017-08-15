@@ -9,7 +9,7 @@
 
 		this.$formElement = $(selector);
 
-		if( this.$formElement.length === 0 )
+		if( !this.$formElement.length )
 			throw new Error('Could not find form element with selector: ' + selector);
 
 	}
@@ -26,8 +26,16 @@
 			fn(data);
 			this.reset();
 			this.elements[0].focus();
+		})	
+	}
+
+	FormHandler.prototype.addFormResetHandler = function(fn){
+
+		this.$formElement.on( 'reset', function(e){
+			e.preventDefault();
+			fn();
 		})
-		
+
 	}
 
 	App.FormHandler = FormHandler;

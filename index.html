@@ -38,6 +38,10 @@
 							<input type='radio' name=size value='grande' />
 							Grande
 						</label>
+						<label>
+							<input type='radio' name=size value='extra-large' />
+							Extra Large
+						</label>
 					</div>
 					<div class='form-group' >
 						<label for='flavorShot'>Flavor Shot</label>
@@ -49,7 +53,7 @@
 						</select>
 					</div>
 					<div class='form-group' >
-						<label for='strengthLevel'>Caffeine Rating</label>
+						<label id='caffeineRating' for='strengthLevel'>Caffeine Rating: 30</label>
 						<div>
 							<input id='strengthLevel' name='strength' type='range' value='30' />
 						</div>
@@ -68,6 +72,7 @@
 	<script src='scripts/datastore.js' charset='utf-8'></script>
 	<script src='scripts/truck.js' charset='utf-8'></script>
 	<script src='scripts/formHandler.js' charset='utf8'></script>
+	<script src='scripts/slideHandler.js' charset='utf8'></script>
 	<script src='scripts/main.js' charset='utf-8'></script>
 
 </body>
