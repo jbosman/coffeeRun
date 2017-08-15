@@ -32,7 +32,6 @@
 	FormHandler.prototype.addFormResetHandler = function(fn){
 
 		this.$formElement.on( 'reset', function(e){
-			e.preventDefault();
 			fn();
 		})
 
