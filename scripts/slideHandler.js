@@ -25,8 +25,22 @@
 		})
 	}
 
+	SlideHandler.prototype.udpateSlideDestinationClasses = function(slideValue){
+		let classes = '';
+
+		if( slideValue > 66 )
+			classes += ' high-caf';
+		else if( slideValue > 33 )
+			classes += 'med-caf';
+		else
+			classes += 'low-caf';
+		
+		this.$slideValueDestination[0].className = classes;
+	}
+
 	SlideHandler.prototype.updateSlideDestinationHTML = function(slideValue){
-		this.$slideValueDestination.html('Caffeine Rating: ' + slideValue);
+		this.udpateSlideDestinationClasses(slideValue);
+		this.$slideValueDestination.html(slideValue);
 	}
 
 	SlideHandler.prototype.resetSlideDestinationHTML = function(){
