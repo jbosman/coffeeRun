@@ -24,6 +24,8 @@
 				data[item.name] = item.value;
 			})
 			fn(data);
+			this.reset();
+			this.elements[0].focus();
 		})
 		
 	}
