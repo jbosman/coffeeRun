@@ -4,11 +4,12 @@
 	let App = window.App;
 	let Truck = App.Truck;
 	let DataStore = App.DataStore;
-	let FormHandler = new App.FormHandler('[data-coffee-order="form"]');
+	let FORM_SELECTOR = '[data-coffee-order="form"]';
+	let FormHandler = new App.FormHandler(FORM_SELECTOR);
 
 	let myTruck = new Truck( 'ncc-1701', new DataStore() );
 	window.myTruck = myTruck;
 
-	FormHandler.addSubmitHandler();
+	FormHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
 
 })(window)
