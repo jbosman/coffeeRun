@@ -14,8 +14,26 @@
 	}
 
 	Checklist.prototype.addRow = function(coffeeOrder){
+		this.removeRow(coffeeOrder.emailAddress);
 		let rowElement = new Row(coffeeOrder);
 		this.$element.append(rowElement.$element);
+	}
+
+	Checklist.prototype.removeRow = function(customerEmail){
+		this.$element
+			.find(`[value="${customerEmail}"]`)
+			.closest(`[data-coffee-order="checkbox"]`)
+			.remove();
+	}
+
+	Checklist.prototype.addClickHandler = function(fn){
+
+		this.$element.on( 'click', 'input', function(e){
+			let email = e.target.value
+			this.removeRow(email);
+			fn(email);
+		}.bind(this))
+
 	}
 
 	function Row(coffeeOrder){
