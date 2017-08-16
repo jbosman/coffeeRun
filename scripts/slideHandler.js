@@ -29,11 +29,11 @@
 		let classes = '';
 
 		if( slideValue > 66 )
-			classes += ' high-caf';
+			classes = ' high-caf';
 		else if( slideValue > 33 )
-			classes += 'med-caf';
+			classes = 'med-caf';
 		else
-			classes += 'low-caf';
+			classes = 'low-caf';
 		
 		this.$slideValueDestination[0].className = classes;
 	}
