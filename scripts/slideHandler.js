@@ -19,7 +19,7 @@
 
 	SlideHandler.prototype.addSlideChangeHandler = function(fn){
 		
-		this.$slideInput.on( 'change', function(e){
+		this.$slideInput.on( 'input', function(e){
 			e.preventDefault();
 			fn(this.value);
 		})
