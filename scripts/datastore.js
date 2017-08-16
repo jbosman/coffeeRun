@@ -1,7 +1,7 @@
 (function(window){
 	'use strict'
 
-	let App = window.app || {};
+	let App = window.App || {};
 
 	function DataStore(){
 		this.data = {};
@@ -24,7 +24,6 @@
 	}
 	
 	App.DataStore = DataStore;
-
 	window.App = App;
 
 })(window)
