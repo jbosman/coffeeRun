@@ -2,6 +2,8 @@ body { padding: 25px; }
 
 label { font-weight: bold;}
 
+label > input { margin-right: 5px; }
+
 .radio > label { margin-left: 5px; }
 
 .panel-body { 
